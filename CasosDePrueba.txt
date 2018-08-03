@@ -1,0 +1,35 @@
+------------------------CASOS DE PRUEBA ----------------------
+Consideraciones:
+Se acota la salida del sistema para mostrar el resultado solamente con 2 decimales.
+Los modulos de suma,resta,multiplicación y división retornan sus resultados en tipo de dato string.
+Reciben como dato de entrada un double.
+
+
+
+Modulo de suma:
+-Suma de dos numeros positivos. Resultado: Positivo.
+-Suma de dos numeros negativos. Resultado: Negativo.
+-Suma de numeros de diferente signo. Resultado: Dependiente de los valores.
+
+Modulo de resta:
+-Resta de dos numeros positivos. Resultado: Dependiente de los valores.
+-Resta de dos numeros negativos. Resultado: Negativo.
+-Resta de numeros de diferente signo. Resultado: Dependiente de los valores.
+
+Modulo de multiplicación:
+-Valida multiplicación con numeros de signos iguales.
+-Valida multiplicación con numeros de diferente signo.
+
+Modulo de división:
+-Valida multiplicación con numeros de signos iguales.
+-Valida multiplicación con numeros de diferente signo.
+-Valida que si el divisor es cero retorne infinito.
+
+Modulo primario:
+-Prueba que en los primeros dos campos de entrada solo se acepten numeros.
+-Prueba que en el tercer campo de entrada esté una operación valida. Si no, imprimir "Error de operación".
+-Prueba que el resultado de salida solo tenga dos decimales.
+
+
+
+
