@@ -20,16 +20,16 @@ public class RestaTest {
     
     @Test
     public void Resta() {
-        assertEquals("10.00", Calc.resta(5, 5));
+        assertEquals("-1.00", Calc.resta(5, 6));
     }
     
     @Test
     public void Resta1() {
-        assertEquals("-15.00", Calc.resta(-5, -10));
+        assertEquals("5.00", Calc.resta(-5, -10));
     }
     
     @Test
     public void Resta2() {
-        assertEquals("5.00", Calc.resta(-5, 10));   
+        assertEquals("-15.00", Calc.resta(-5, 10));   
     }
 }
