@@ -57,69 +57,78 @@ public class Calc {
 
     public static String Resultado(double n1,double n2, String operation){
         
-        String ans;
+        String value;
+        double values;
         switch (operation)  {
         case "+":
-            
-            ans = Calc.suma(n1, n2);
-            return ans;
+            values = n1+n2;
+            value = String.format ("%.2f", values);
+            return value;
 
         case "-":
-            ans = Calc.resta(n1, n2);
-            return ans;
+            values = n1-n2;
+            value = String.format ("%.2f", values);
+            return value;
 
         case "/":
-            ans = Calc.division(n1, n2);
-            return ans;
+            if (n2!= 0 ){
+            values = n1/n2;
+            value = String.format ("%.2f", values); 
+            }
+            else{
+                value = "INF";
+            }
+            return value;
 
         case "*":
-            ans = Calc.multiplicacion(n1, n2);
-            return ans;
+            values = n1*n2;
+            value = String.format ("%.2f", values);
+            return value;
 
         default:
-            ans = "ERROR DE OPERACION";
-            return ans;
+            value = "ERROR DE OPERACION";
+            return value;
 
         }
         
         
     }
     
-    public static String suma(double a, double b){
-        
-        double values = a+b;
-        String value = String.format ("%.2f", values);
-    return value;
-        
-    }
-    
-    public static String resta(double a, double b){
-        double values = a-b;
-        String value = String.format ("%.2f", values);
-    return value;
-        
-    }
-    
-    public static String multiplicacion(double a, double b){
-        double values = a*b;
-        String value = String.format ("%.2f", values);
-    return value;
-        
-    }
-    public static String division(double a, double b){
-        String value;
-        if (b!= 0 ){
-            double values = a/b;
-            value = String.format ("%.2f", values); 
-        
-        }
-        else{
-            value = "INF";
-        }
-        
-    return value;
-        
-    }
+//    public static String suma(double a, double b){
+//        
+//        double values = a+b;
+//        String value = String.format ("%.2f", values);
+//    return value;
+//        
+//    }
+//    
+//    public static String resta(double a, double b){
+//        double values = a-b;
+//        String value = String.format ("%.2f", values);
+//    return value;
+//        
+//    }
+//    
+//    public static String multiplicacion(double a, double b){
+//        double values = a*b;
+//        String value = String.format ("%.2f", values);
+//    return value;
+//        
+//    }
+//    public static String division(double a, double b){
+//        String value;
+//        if (b!= 0 ){
+//            double values = a/b;
+//            value = String.format ("%.2f", values); 
+//        
+//        }
+//        else{
+//            value = "INF";
+//        }
+//        
+//    return value;
+//        
+//    }
     
     
     
