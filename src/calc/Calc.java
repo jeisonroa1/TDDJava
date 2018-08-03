@@ -101,7 +101,8 @@ public class Calc {
     }
     
     public static String multiplicacion(double a, double b){
-        String value = "0";
+        double values = a*b;
+        String value = String.format ("%.2f", values);
     return value;
         
     }
