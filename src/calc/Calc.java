@@ -103,7 +103,16 @@ public class Calc {
         
     }
     public static String division(double a, double b){
-        String value = "0";
+        String value;
+        if (b!= 0 ){
+            double values = a/b;
+            value = String.format ("%.2f", values); 
+        
+        }
+        else{
+            value = "INF";
+        }
+        
     return value;
         
     }
