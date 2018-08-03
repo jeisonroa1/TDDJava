@@ -26,8 +26,9 @@ Modulo de división:
 -Valida que si el divisor es cero retorne infinito.
 
 Modulo primario:
--Prueba que en los primeros dos campos de entrada solo se acepten numeros.
--Prueba que en el tercer campo de entrada esté una operación valida. Si no, imprimir "Error de operación".
+-Prueba que el metodo de lectura retorne un valor numerico.
+-Prueba que en el tercer campo de entrada esté una operación valida. 
+ Si no, imprimir "Error de operación".
 -Prueba que el resultado de salida solo tenga dos decimales.
 
 
