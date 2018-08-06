@@ -18,6 +18,8 @@ public class Calc {
     /**
      * @param args the command line arguments
      */
+    
+    static Log log = new Log();
     public static void main(String[] args) {
         // TODO code application logic here
         String operation = "+";
@@ -26,7 +28,9 @@ public class Calc {
             double n1 = Calc.LecturaN1(); // Lectura numero 1
             double n2 = Calc.LecturaN2(); // Lectura numero 2
             operation = Calc.LecturaOperacion(); // Lectura Operacion
-            System.out.println("Your answer is " + Calc.Resultado(n1, n2, operation)); // Imprime el resultado
+            String salida = log.formato(n1,n2,operation);
+            log.agregarEntrada(salida); // Agrega al log
+            System.out.println(salida); // Imprime el resultado
         
         }
     }
@@ -88,6 +92,9 @@ public class Calc {
             values = n1*n2;
             value = String.format ("%.2f", values);
             return value;
+            
+        case "l":
+            return log.imprimirLog();
 
         default:
             value = "ERROR DE OPERACION";
