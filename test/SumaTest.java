@@ -16,22 +16,17 @@ import static org.junit.Assert.*;
  *
  * @author jroa
  */
-public class SumaTest {
-    
-    
+public class SumaTest {    
     @Test
     public void Suma() {
         assertEquals("10.00", Calc.suma(5, 5));
-    }
-    
+    }    
     @Test
     public void Suma1() {
         assertEquals("-15.00", Calc.suma(-5, -10));
-    }
-    
+    }    
     @Test
     public void Suma2() {
         assertEquals("5.00", Calc.suma(-5, 10));   
-    }
-    
+    }    
 }

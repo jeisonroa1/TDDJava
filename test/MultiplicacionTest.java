@@ -17,12 +17,10 @@ import static org.junit.Assert.*;
  * @author jroa
  */
 public class MultiplicacionTest {
-    
     @Test
     public void Multiplicacion() {
         assertEquals("25.00", Calc.multiplicacion(5, 5));
-    }
-    
+    }    
     @Test
     public void Multiplicacion1() {
         assertEquals("-50.00", Calc.multiplicacion(-5, 10));

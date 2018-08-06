@@ -20,13 +20,11 @@ public class DivisionTest {
     @Test
     public void Division() {
         assertEquals("1.00", Calc.division(5, 5));
-    }
-    
+    }    
     @Test
     public void Division1() {
         assertEquals("-0.50", Calc.division(-5, 10));
-    }
-    
+    }    
     @Test
     public void Division2() {
         assertEquals("INF", Calc.division(-5, 0));

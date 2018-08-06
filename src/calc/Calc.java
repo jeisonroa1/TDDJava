@@ -1,24 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package calc;
 
 import java.util.Scanner;
 
-/**
- *
- * @author jroa
- */
 public class Calc {
 
-
-
-    /**
-     * @param args the command line arguments
-     */
-    
+ 
+    static Scanner scannerObject = new Scanner(System.in);
     static Log log = new Log();
     public static void main(String[] args) {
         // TODO code application logic here
@@ -36,111 +24,66 @@ public class Calc {
     }
     
     public static double LecturaN1(){
-        
-        Scanner scannerObject = new Scanner(System.in);
         System.out.println("Enter first number");
         double n1 = scannerObject.nextDouble();
-        return n1;
-        
-        
-    }
+        return n1;    }
     
     public static double LecturaN2(){
-        
-        Scanner scannerObject = new Scanner(System.in);
         System.out.println("Enter the second number");
         double n2 = scannerObject.nextDouble();
-        return n2;
-        
-        
-    }
+        return n2;    }
     
     public static String LecturaOperacion(){
-        Scanner op = new Scanner(System.in);
         System.out.println("Enter your operation: (+,-,*,/,q Salir, l Log)");
-        String operation = op.next();       
-        return operation;
-    }
-    
+        String operation = scannerObject.next();       
+        return operation;    }    
 
     public static String Resultado(double n1,double n2, String operation){
-        
-        String value;
-        double values;
         switch (operation)  {
-        case "+":
-            values = n1+n2;
-            value = String.format ("%.2f", values);
-            return value;
-
-        case "-":
-            values = n1-n2;
-            value = String.format ("%.2f", values);
-            return value;
-
-        case "/":
-            if (n2!= 0 ){
-            values = n1/n2;
-            value = String.format ("%.2f", values); 
-            }
-            else{
-                value = "INF";
-            }
-            return value;
-
-        case "*":
-            values = n1*n2;
-            value = String.format ("%.2f", values);
-            return value;
-            
-        case "l":
-            return log.imprimirLog();
-
-        default:
-            value = "ERROR DE OPERACION";
-            return value;
-
-        }
+        case "+":   return String.format ("%.2f", n1+n2);
+        case "-":   return String.format ("%.2f", n1-n2);
+        case "/":   if (n2!= 0 ){ return String.format ("%.2f", n1/n2);  }
+                    else{   return "INF";      }
+        case "*":   return String.format ("%.2f",n1*n2);
+        case "l":   return log.imprimirLog();
+        default:    return "ERROR DE OPERACION";     }
+    }
+    
+// /*
+    public static String suma(double a, double b){
         
+        double values = a+b;
+        String value = String.format ("%.2f", values);
+    return value;
         
     }
     
-//    public static String suma(double a, double b){
-//        
-//        double values = a+b;
-//        String value = String.format ("%.2f", values);
-//    return value;
-//        
-//    }
-//    
-//    public static String resta(double a, double b){
-//        double values = a-b;
-//        String value = String.format ("%.2f", values);
-//    return value;
-//        
-//    }
-//    
-//    public static String multiplicacion(double a, double b){
-//        double values = a*b;
-//        String value = String.format ("%.2f", values);
-//    return value;
-//        
-//    }
-//    public static String division(double a, double b){
-//        String value;
-//        if (b!= 0 ){
-//            double values = a/b;
-//            value = String.format ("%.2f", values); 
-//        
-//        }
-//        else{
-//            value = "INF";
-//        }
-//        
-//    return value;
-//        
-//    }
+    public static String resta(double a, double b){
+        double values = a-b;
+        String value = String.format ("%.2f", values);
+    return value;
+        
+    }
     
-    
-    
+    public static String multiplicacion(double a, double b){
+        double values = a*b;
+        String value = String.format ("%.2f", values);
+    return value;
+        
+    }
+    public static String division(double a, double b){
+        String value;
+        if (b!= 0 ){
+            double values = a/b;
+            value = String.format ("%.2f", values); 
+        
+        }
+        else{
+            value = "INF";
+        }
+        
+    return value;
+        
+    }
+    // */
 }

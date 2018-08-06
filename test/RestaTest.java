@@ -16,18 +16,15 @@ import static org.junit.Assert.*;
  *
  * @author jroa
  */
-public class RestaTest {
-    
+public class RestaTest {    
     @Test
     public void Resta() {
         assertEquals("-1.00", Calc.resta(5, 6));
-    }
-    
+    }    
     @Test
     public void Resta1() {
         assertEquals("5.00", Calc.resta(-5, -10));
-    }
-    
+    }    
     @Test
     public void Resta2() {
         assertEquals("-15.00", Calc.resta(-5, 10));   
