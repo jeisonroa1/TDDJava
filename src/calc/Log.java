@@ -10,5 +10,10 @@ package calc;
  * @author JR
  */
 public class Log {
+
+    public static String verLog() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
 }
