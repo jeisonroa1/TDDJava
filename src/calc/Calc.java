@@ -20,11 +20,15 @@ public class Calc {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        double n1 = Calc.LecturaN1(); // Lectura numero 1
-        double n2 = Calc.LecturaN2(); // Lectura numero 2
-        String operation = Calc.LecturaOperacion(); // Lectura Operacion
-        System.out.println("Your answer is " + Calc.Resultado(n1, n2, operation)); // Imprime el resultado
+        String operation = "+";
+        while (!"q".equals(operation)) // Mientras la operación no sea q
+        {
+            double n1 = Calc.LecturaN1(); // Lectura numero 1
+            double n2 = Calc.LecturaN2(); // Lectura numero 2
+            operation = Calc.LecturaOperacion(); // Lectura Operacion
+            System.out.println("Your answer is " + Calc.Resultado(n1, n2, operation)); // Imprime el resultado
         
+        }
     }
     
     public static double LecturaN1(){
@@ -49,7 +53,7 @@ public class Calc {
     
     public static String LecturaOperacion(){
         Scanner op = new Scanner(System.in);
-        System.out.println("Enter your operation");
+        System.out.println("Enter your operation: (+,-,*,/,q Salir, l Log)");
         String operation = op.next();       
         return operation;
     }
