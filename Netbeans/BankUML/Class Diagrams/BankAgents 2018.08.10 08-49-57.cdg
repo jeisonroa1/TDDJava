@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="BankAgents">
+  <ClassDiagramComponents>
+    <Class name="Cashier" package="Logic" visibility="public" xPosition="213.0" yPosition="737.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="Name"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Client" package="Logic" visibility="public" xPosition="556.0" yPosition="47.0">
+      <Fields>
+        <Field name="Name" type="String" visibility="protected"/>
+        <Field name="Operation" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="Name"/>
+          <Argument type="String" name="Operation"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="Name"/>
+        </Method>
+        <Method name="getOperation" returnType="String" visibility="public"/>
+        <Method name="setOperation" returnType="void" visibility="public">
+          <Argument type="String" name="Operation"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Director" package="Logic" visibility="public" xPosition="213.0" yPosition="607.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="String" name="Name"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Dispatcher" package="Logic" visibility="public" xPosition="1021.0" yPosition="699.0">
+      <Fields>
+        <Field name="initTime" type="long" visibility="package"/>
+        <Field name="UI" type="Presentation" visibility="package"/>
+        <Field name="executor" type="ExecutorService" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="attend" returnType="void" visibility="public">
+          <Argument type="Client" name="Client"/>
+          <Argument type="Employee" name="Employee"/>
+        </Method>
+        <Method name="close" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="Logic" visibility="public" isAbstract="true" xPosition="569.0" yPosition="530.0">
+      <Fields>
+        <Field name="Name" type="String" visibility="protected"/>
+        <Field name="Task" type="String" visibility="protected"/>
+        <Field name="LastTime" type="long" visibility="protected"/>
+        <Field name="r" type="Random" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="Name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="deposit" returnType="void" visibility="public"/>
+        <Method name="withdraw" returnType="void" visibility="public"/>
+        <Method name="issueSolution" returnType="void" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="Name"/>
+        </Method>
+        <Method name="getTask" returnType="String" visibility="public"/>
+        <Method name="setTask" returnType="void" visibility="public">
+          <Argument type="String" name="Task"/>
+        </Method>
+        <Method name="getLastTime" returnType="double" visibility="public"/>
+        <Method name="setLastTime" returnType="void" visibility="public">
+          <Argument type="long" name="LastTime"/>
+        </Method>
+        <Method name="get" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="Logic" visibility="public" xPosition="569.0" yPosition="348.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="fillEmployees" returnType="Employee[]" visibility="public" isStatic="true"/>
+        <Method name="fillClients" returnType="Client[]" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Supervisor" package="Logic" visibility="public" xPosition="840.0" yPosition="607.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="Name"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Presentation" package="UI" visibility="public" xPosition="1073.0" yPosition="953.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="show" returnType="void" visibility="public">
+          <Argument type="String" name="Message"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Logic.Principal" target="Logic.Client" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Logic.Supervisor" target="Logic.Employee"/>
+    <IsRelation name="is" source="Logic.Director" target="Logic.Employee"/>
+    <UseRelation source="Logic.Principal" target="Logic.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="UI" source="Logic.Dispatcher" target="UI.Presentation" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Logic.Dispatcher" target="Logic.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Logic.Cashier" target="Logic.Employee"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
